@@ -5,6 +5,9 @@
 * @param {number} count Number of points to generate.
 * @return {array} Array of Objects with lat and lng attributes.
 */
+
+// From https://gist.github.com/fajarlabs/af9e0859fc29b2107bd1797536d2ff2d
+
 export const generateRandomPoints = (center, radius, count) => {
   var points = [];
   for (var i=0; i<count; i++) {
@@ -40,6 +43,3 @@ export const generateRandomPoint = (center, radius) => {
   // Resulting point.
   return {'lat': y+y0, 'lng': xp+x0};
 }
-
-
-

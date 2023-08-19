@@ -1,38 +1,43 @@
-# create-svelte
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Porta-Poo
 
-## Creating a project
+My friend wanted a project where they could add bathroom locations. I needed a reason to learn Svelte.
 
-If you're seeing this, you've probably already done this step. Congrats!
+### Built With
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+* [![Svelte][SvelteKit]][https://kit.svelte.dev/]
+* [![Svelte Motion][Svelte Motion]][https://svelte-motion.gradientdescent.de/]
+* [![Mongo][MongoDb]][https://www.mongodb.com/]
+* [![Leaflet][Leaflet]][https://leafletjs.com/]
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+### Features List
+* [x] Map with markers
+* [x] Fetch markers from database/render with popup
+* [x] Draggable overlay like google maps
+* [] User submission of new markers
+  - Form with data
+  - Image upload
+  - Captcha or other verification method
+  - Data sanitization
+  - Some method of flagging?
+  - Consider how to verify. Should this only be members who have signed up?
+  - How to enable a user to delete their own posts? Should that be a feature, even?
+* [] User editing of markers
+  - Shouldn't be able to overwrite, but can add new photos and reviews, as well as verification
+  - Star ratings should be aggregated from all ratings for an entry.
+    - Question: should each rating be associated with an individual review, or is just a list of numbers ok?
+    - I think probably reviews should be their own thing. A one-to-many with both a user key and a potty key?
+  - At first we should probably flag everything and manually check it
+* [] Marker info display: short veresion in popup, longer version plus option to leave review/add photos/see gallery in card
+* [] Default card display: No marker selected, card should show different things
+* [] Marker add shortcut: Long press should bring up form with lat/long filled in
+* [] Bottom tray with options
+  - [] Base tray
+  - [] Icons
+  - [] Icons that actually do stuff
+* [] Donation functionality, probably in the bottom try but maybe also other places?
+* [] Eventually directions would be a great feature - need to check costs and difficulty of implementation
+* [] Admin dashboard where authed users can see flagged posts and review stuff, delete if necessary

@@ -16,7 +16,6 @@
 
 <style>
 	.selected {
-		background-opacity: 25%;
 		background-color: #DCC;
 	}
 	
@@ -31,7 +30,6 @@
 	}
 	
 	.single-click:hover {
-		background-opacity: 50%;
 		background-color: lightgray;
 	}
 </style>
